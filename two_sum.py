@@ -54,3 +54,5 @@ Edge Cases: Given the problem constraints, we can assume there is exactly one so
 This approach has a time complexity of O(n), where n is the number of elements in the array. This is because accessing and inserting elements in a hashmap is average O(1) time complexity.
 
 '''
+
+# Solution:
