@@ -56,3 +56,16 @@ This approach has a time complexity of O(n), where n is the number of elements i
 '''
 
 # Solution:
+
+class Solution:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        for idx, element in enumerate(nums):
+            for idx1, element1 in enumerate(nums):
+                if idx <= idx1:
+                    continue
+                if element + element1 == target:
+                    return [idx, idx1]
+
+
+
+        
