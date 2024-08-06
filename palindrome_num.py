@@ -41,15 +41,10 @@ def isPalindrome(x: int) -> bool:
         return True
     string = str(x)
     print(string)
-    temp2 = int(len(string)/2)
-    print(temp2)
-    temp3 = temp2 - 1
-    print(temp3)
-    first_half = string[:temp3]
-    print(first_half)
-    second_half = string[temp2:]
-    print(second_half)
-    if first_half == second_half:
-        return True
-    else:
-        return False
+    # y = len(string)
+    temp2 = len(string)//2
+    for i in range(temp2):
+        if string[i]!=string[-(i+1)]:
+            return False
+        if i == temp2 - 1:
+            return True
