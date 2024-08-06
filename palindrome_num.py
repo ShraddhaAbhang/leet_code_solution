@@ -33,3 +33,23 @@ Follow up: Could you solve it without converting the integer to a string?
 '''
 
 # Solution:
+
+def isPalindrome(x: int) -> bool:
+    if x < 0:
+        return False
+    if x < 10:
+        return True
+    string = str(x)
+    print(string)
+    temp2 = int(len(string)/2)
+    print(temp2)
+    temp3 = temp2 - 1
+    print(temp3)
+    first_half = string[:temp3]
+    print(first_half)
+    second_half = string[temp2:]
+    print(second_half)
+    if first_half == second_half:
+        return True
+    else:
+        return False
