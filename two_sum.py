@@ -65,7 +65,3 @@ class Solution:
                     continue
                 if element + element1 == target:
                     return [idx, idx1]
-
-
-
-        
