@@ -50,3 +50,33 @@ It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 '''
 
 # Solution:
+
+def roman_to_integer(s: str) -> int:
+    # Define the Roman numeral to integer mapping
+    roman_to_int = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+    
+    # Initialize total and previous value
+    total = 0
+    prev_value = 0
+    
+    # Traverse the Roman numeral string
+    for char in s:
+        current_value = roman_to_int[char]
+        if current_value > prev_value:
+            # If the current value is greater than the previous one, adjust total
+            total += current_value - 2 * prev_value
+        else:
+            # Otherwise, just add the current value
+            total += current_value
+        prev_value = current_value
+    
+    return total
+
