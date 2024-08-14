@@ -79,4 +79,3 @@ def roman_to_integer(s: str) -> int:
         prev_value = current_value
     
     return total
-
