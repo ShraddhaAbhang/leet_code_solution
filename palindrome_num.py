@@ -71,6 +71,7 @@ class Solution:
         return x == reverted_number or x == reverted_number // 10
 
 '''
+
 Explanation:
 Negative and Edge Case Check:
 
@@ -87,5 +88,6 @@ Handling Odd and Even Digits:
 
 For odd-digit numbers, the middle digit doesn't affect the palindrome property, so we discard it by dividing the reverted number by 10.
 This approach avoids string conversion and provides a more optimal solution for checking if a number is a palindrome.
+
 
 '''
